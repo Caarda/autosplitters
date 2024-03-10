@@ -34,7 +34,7 @@ startup {
 	settings.Add("56", false, "Japan");
 
 	settings.SetToolTip("minigames", "These are intended for No Tab and Any% No Major Glitches.");
-	settings.SetToolTip("finals", "These are intended for ALU, (note all runs use flagpole timing).");
+	settings.SetToolTip("finals", "These are intended for ALU; note all runs use flagpole timing.");
 }
 
 update {
