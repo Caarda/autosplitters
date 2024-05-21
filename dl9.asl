@@ -37,7 +37,6 @@ init
     vars.Helper.TryLoad = (Func<dynamic, bool>)(mono =>
     {
         vars.Helper["isLoading"] = mono.Make<bool>("Wix.Transition", "transitioning");
-        vars.Helper["isLoading"].FailAction = MemoryWatcher.ReadFailAction.SetZeroOrNull;
 
         vars.Helper["duckList"] = mono.MakeList<IntPtr>("SaveData", "_profile", "flockDucks");
         vars.duckNameOffset = mono["Duck"]["name"];
@@ -87,4 +86,9 @@ start
 isLoading
 {
     return current.isLoading;
+}
+
+exit
+{
+    timer.IsGameTimePaused = true;
 }
